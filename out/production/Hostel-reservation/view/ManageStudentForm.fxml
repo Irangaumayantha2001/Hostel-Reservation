@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentContext" prefHeight="710.0" prefWidth="1078.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageStudentController">
+   <children>
+      <AnchorPane layoutX="31.0" layoutY="75.0" prefHeight="222.0" prefWidth="1021.0" style="-fx-background-color: #4ADEDE; -fx-background-radius: 20;">
+         <children>
+            <JFXTextField fx:id="txtStudentDob" labelFloat="true" layoutX="510.0" layoutY="58.0" onKeyReleased="#textFields_Key_Released" prefHeight="33.0" prefWidth="385.0" promptText="Student Dob :">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtStudentGender" labelFloat="true" layoutX="510.0" layoutY="103.0" onKeyReleased="#textFields_Key_Released" prefHeight="33.0" prefWidth="385.0" promptText="Student Gender :">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="674.0" layoutY="173.0" onAction="#clearStudentOnAction" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #416BF0;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnADD" buttonType="RAISED" layoutX="535.0" layoutY="174.0" onAction="#addStudentOnAction" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #156398;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="732.0" layoutY="15.0" onAction="#addNewStudentOnAction" style="-fx-background-color: linear-gradient(to right,#00d8d6,#487eb0);" text="+ New Student" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtStudentId" labelFloat="true" layoutX="43.0" layoutY="80.0" onKeyReleased="#textFields_Key_Released" prefHeight="32.0" prefWidth="472.0" promptText="Student ID :">
+         <font>
+            <Font name="Ubuntu Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentAddress" labelFloat="true" layoutX="43.0" layoutY="184.0" onKeyReleased="#textFields_Key_Released" prefHeight="33.0" prefWidth="472.0" promptText="Student  Address :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentContactNo" labelFloat="true" layoutX="43.0" layoutY="242.0" onKeyReleased="#textFields_Key_Released" prefHeight="33.0" prefWidth="472.0" promptText="Student Contact_No:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentName" labelFloat="true" layoutX="43.0" layoutY="131.0" onKeyReleased="#textFields_Key_Released" prefHeight="32.0" prefWidth="472.0" promptText="Student Name :">
+         <font>
+            <Font name="Ubuntu Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <AnchorPane layoutX="26.0" layoutY="314.0" prefHeight="385.0" prefWidth="1034.0" style="-fx-background-color: #4ADEDE; -fx-background-radius: 20;">
+         <children>
+            <TableView fx:id="tblStudent" layoutX="48.0" layoutY="26.0" prefHeight="304.0" prefWidth="965.0">
+               <columns>
+                  <TableColumn prefWidth="79.0" text="Id" />
+                  <TableColumn prefWidth="107.0" text="Name" />
+                  <TableColumn prefWidth="133.0" text="Address" />
+                  <TableColumn prefWidth="133.0" text="PNo" />
+                  <TableColumn prefWidth="138.0" text="Dob" />
+                  <TableColumn prefWidth="158.0" text="Gender" />
+                  <TableColumn prefWidth="106.0" text="Edit" />
+                  <TableColumn prefWidth="106.0" text="Delete" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+      <Label alignment="CENTER" layoutX="113.0" layoutY="6.0" prefHeight="41.0" prefWidth="799.0" text="Manage Student" textFill="#073472">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="14.0" onMouseClicked="#moveToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert/home.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="-3.0" layoutY="48.0" prefHeight="0.0" prefWidth="1078.0" />
+   </children>
+</AnchorPane>
