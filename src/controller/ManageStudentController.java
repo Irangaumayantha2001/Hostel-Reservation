@@ -107,7 +107,7 @@ public class ManageStudentController implements Initializable {
         buttonDelete.setOnAction((event) -> {
             ButtonType yes = new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
             ButtonType no = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure whether you want to delete this Course?", yes, no);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure whether you want to delete this Student?", yes, no);
             alert.setTitle("Confirmation Alert");
             Optional<ButtonType> result = alert.showAndWait();
 
@@ -170,7 +170,7 @@ public class ManageStudentController implements Initializable {
 
                 btnADD.setOnAction(event1 -> {
                     if (studentBO.updateStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(),txtStudentAddress.getText(),txtStudentContactNo.getText(),txtStudentDob.getText(),txtStudentGender.getText()))) {
-                        new Alert(Alert.AlertType.CONFIRMATION, "Successfully Updated New Course.").showAndWait();
+                        new Alert(Alert.AlertType.CONFIRMATION, "Successfully Updated New Student.").showAndWait();
                         loadAllStudents();
                         txtStudentName.clear();
                         txtStudentAddress.clear();
@@ -228,7 +228,7 @@ public class ManageStudentController implements Initializable {
         }else {
 
             if (studentBO.saveStudent(new StudentDTO(txtStudentId.getText(), txtStudentName.getText(),txtStudentAddress.getText(),txtStudentContactNo.getText(),txtStudentDob.getText(),txtStudentGender.getText()))) {
-                new Alert(Alert.AlertType.CONFIRMATION, "Successfully Added New Course.").showAndWait();
+                new Alert(Alert.AlertType.CONFIRMATION, "Successfully Added New Student.").showAndWait();
 
                 loadAllStudents();
 
