@@ -115,7 +115,7 @@ public class ManageRoomController implements Initializable {
         buttonDelete.setOnAction((event) -> {
             ButtonType yes= new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
             ButtonType no= new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Are you sure whether you want to delete this Course?",yes,no);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Are you sure whether you want to delete this Room?",yes,no);
             alert.setTitle("Confirmation Alert");
             Optional<ButtonType> result = alert.showAndWait();
 
@@ -224,7 +224,7 @@ public class ManageRoomController implements Initializable {
         }else {
 
             if (roomBO.saveRoom(new RoomDTO(txtRoomId.getText(), cmbRoomType.getValue(), Double.parseDouble(txtRoomMonthlyRent.getText()),Integer.parseInt(txtRoomQty.getText())))){
-                new Alert(Alert.AlertType.CONFIRMATION, "Successfully Added New Course.").showAndWait();
+                new Alert(Alert.AlertType.CONFIRMATION, "Successfully Added New Room.").showAndWait();
 
                 loadAllRooms();
 
