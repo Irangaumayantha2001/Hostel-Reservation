@@ -72,16 +72,6 @@
                </font>
             </JFXButton>
             <JFXPasswordField fx:id="txtPassword" layoutX="768.0" layoutY="354.0" prefHeight="28.0" prefWidth="292.0" />
-            <ImageView fitHeight="38.0" fitWidth="82.0" layoutX="873.0" layoutY="521.0" onMouseClicked="#moveSignIn" pickOnBounds="true">
-               <image>
-                  <Image url="@../assert/sign-in.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="770.0" layoutY="394.0" onMouseClicked="#moveForgetPassword" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assert/confusion.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </children>

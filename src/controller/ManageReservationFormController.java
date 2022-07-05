@@ -68,8 +68,7 @@ public class ManageReservationFormController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        tblReservation.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("reservationId"));
+        tblReservation.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("res_id"));
         tblReservation.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("room_id"));
         tblReservation.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("type"));
         tblReservation.getColumns().get(3).setCellValueFactory(new PropertyValueFactory<>("monthly_rent"));
@@ -109,7 +108,7 @@ public class ManageReservationFormController implements Initializable {
     public void setDBtn(){
         buttonDelete = new JFXButton();
         buttonDelete.setStyle("-fx-border-color: red");
-        Image img = new Image("assets/icons/icons8-delete-64.png");
+        Image img = new Image("assert/icons8-delete-64.png");
         ImageView view = new ImageView(img);
         view.setFitHeight(26);
         view.setFitWidth(35);
@@ -120,7 +119,7 @@ public class ManageReservationFormController implements Initializable {
     public void setUBtn(){
         buttonUpdate = new JFXButton();
         buttonUpdate.setStyle("-fx-border-color: blueviolet");
-        Image img = new Image("assets/icons/icons8-edit-48.png");
+        Image img = new Image("assert/icons8-edit-48.png");
         ImageView view = new ImageView(img);
         view.setFitHeight(26);
         view.setFitWidth(35);

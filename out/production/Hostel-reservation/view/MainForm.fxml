@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainFormContext" prefHeight="452.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="169.0" prefHeight="154.0" prefWidth="844.0" style="-fx-background-color: #4ADEDE; -fx-background-radius: 20;">
+         <children>
+            <ImageView fx:id="imgstudent" fitHeight="135.0" fitWidth="135.0" layoutX="112.0" layoutY="10.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/student.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgroom" fitHeight="135.0" fitWidth="135.0" layoutX="390.0" layoutY="10.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/room.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgreservation" fitHeight="135.0" fitWidth="135.0" layoutX="643.0" layoutY="10.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/reservation.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Label alignment="CENTER" layoutX="157.0" layoutY="89.0" prefHeight="49.0" prefWidth="630.0" text="Hostel-Reservation" textFill="#0a39f7">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="3.0" layoutY="138.0" prefHeight="17.0" prefWidth="883.0" />
+      <Label alignment="CENTER" layoutX="176.0" layoutY="24.0" prefHeight="17.0" prefWidth="600.0" text="WELCOME" textFill="#0a39f7">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="173.0" layoutY="344.0" prefHeight="32.0" prefWidth="600.0" text="Welcome" textAlignment="CENTER" textFill="#0a39f7">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="151.0" layoutY="393.0" prefHeight="28.0" prefWidth="630.0" text="Please select one of above main operations to proceed">
+         <font>
+            <Font name="Ubuntu Bold" size="23.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="24.0" onMouseClicked="#moveToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert/home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="721.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assert/student1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblstudentcount" layoutX="795.0" layoutY="26.0" text="Label">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

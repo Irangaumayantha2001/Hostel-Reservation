@@ -35,7 +35,7 @@ public class LoginFormController {
 
             if (data.getUserName().equals(txtUserName.getText()) && data.getPassword().equals(txtPassword.getText())){
 
-                FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../view/DashBoardForm.fxml"));
+                FXMLLoader loader = new FXMLLoader(this.getClass().getResource("../view/MainForm.fxml"));
                 Parent load = loader.load();
                 MainFormController controller = loader.<MainFormController>getController();
                 Stage window = (Stage) mainFormContext.getScene().getWindow();
